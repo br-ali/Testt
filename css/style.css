@@ -1,7 +1,8 @@
 :root{
-    --1st-color:rgb(27, 3, 59);
+    --1st-color:#b41010;
 }
 body{
+   background: #b6acac;
     font-family: 'Titillium Web', sans-serif;
     height: 1400px;
 }
@@ -23,18 +24,29 @@ z-index: 999;
 }
 
 .blok{
-    background-color: transparent;
-    width: 50px;
-    height: 50px;
+    /* background-color: transparent; */
+    width: 60px;
+    height: 60px;
 }
-.search.form-control{
+.brand{
+    font-size: 2rem;
+    align-self: center;
+    background-image: linear-gradient(to right, #be2aab 0%, #954cd1 50%, #1523e7 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+/* .search.form-control{
     background-color: rgba(240, 248, 255, 0.144) ;
     border-right: 1px solid rgb(219, 17, 84);
 }
 .search svg{
     color: brown;
     font-size: 20px;
-}
+    cursor: pointer;
+} */
 .navbar-toggler{
     color: white;
  font-size: 25px;
@@ -50,6 +62,13 @@ border-color: brown;
     width: 400px;  
     height: 200px;
 }
+h2{
+    background-image: linear-gradient(to right, #be2aab 0%, #954cd1 50%, #1523e7 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
 .landing{
     background-color: violet;
     min-height: calc(100vh - 50px);
@@ -58,17 +77,22 @@ border-color: brown;
 content: '';
 width: 120px;
 height: 2px;
-background-color: brown;
+background-color: #d30a0a;
 position: absolute;
 bottom: -2px;
 left: 50%;
 transform: translateX(-50%);
 }
 .main-btn{
-    background-color: brown;
+    background-color: #caac04;
 }
-.mail:focus{
+.mailLink:focus{
     font-size: x-large;
+    text-decoration: none;
+}
+.telLink:focus{
+    font-size: x-large;
+    text-decoration: none;
 }
 .footer{
     background-color: var(--1st-color);
@@ -76,3 +100,141 @@ transform: translateX(-50%);
 .row ul a{
     text-decoration: none;
 }
+.container{
+    border: none;
+}
+#s{
+position: relative;
+background: transparent;
+border: solid 2px;
+border-radius: 2px;
+padding: 1rem 0 1rem 0;
+/* align-items:flex-end; */
+cursor: pointer;
+
+}
+#s:hover{
+    transform: scale(1.025);
+    transition: 0.3s ease-in;
+    cursor: pointer;
+}
+#s b{
+    font-size: 2rem;
+    background-image: linear-gradient(to right, #be2aab 0%, #954cd1 50%, #1523e7 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.details{
+    cursor: pointer;
+}
+.details:hover{
+    transform: scale(1.075);
+    transition: 0.3s ease-in;
+    
+}
+.box{
+    animation-name: boxanimation;
+    animation-duration: .5s;
+}
+.box h5{
+    position: relative;
+    
+}
+.box h5::after{
+    content: '+';
+    position: absolute;
+   right: -5px;
+    font-size: 2rem;
+    bottom: -5px;
+    cursor: pointer;
+   
+}
+/* .box p{
+    display: none;
+    overflow: hidden;
+} */
+.box.active p{
+    display: block;
+}
+.box.active h5::after{
+    content: '-';
+    position: absolute;
+   right: -5px;
+    font-size: 2rem;
+    bottom: -5px;
+    cursor: pointer;
+    
+
+}
+.plus svg{
+    border: solid 1px #16bb7c;
+    border-radius: 5px;
+}
+.mail-box{
+    /* background: url("../img/mail5.jpg") no-repeat center center/ cover;
+    opacity: 0.75; */
+    display: none;
+    
+}
+.error{
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #d30a0a;
+    opacity: 0.75;
+    display: none;
+}
+.mail-box.show{
+    display: block;
+}
+.form-label{
+    color: #000000;
+    font-size: 1.5rem;
+    
+}
+.form-label::after{
+    content: '*';
+    color: #e00909;
+    margin-left: 10px;
+}
+.tel-box{
+    display: none;
+}
+.tel-box.show{
+    display: block;
+}
+h5{
+    background-image: linear-gradient(to right, #be2aab 0%, #954cd1 50%, #1523e7 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.btn{
+    background-image: linear-gradient(to right, #be2aab 0%, #954cd1 50%, #1523e7 100%);
+    background-size: 100%;
+    cursor: pointer;
+   align-self: center;
+   overflow: hidden;
+    
+}
+.btn:hover{
+    transform: scaleX(0.75);
+    transition: 0.5s ease-in-out;
+    
+}
+
+ /* @keyframes boxanimation {
+        from{
+            top:-500px
+            opacity: 0;
+        }
+        to{
+            top: 50%;
+            opacity: 1;
+        }
+        
+    } */
+    
